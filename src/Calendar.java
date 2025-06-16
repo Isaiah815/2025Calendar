@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Scanner;
 
 public class Calendar {
 
@@ -26,9 +27,13 @@ public class Calendar {
 System.out.println();
     }
     public static void main(String[] args) {
-int year = 2025;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter year");
+        int year = sc.nextInt();
 for (Month month : Month.values()){
     printCalendar(year,month);
 }
+sc.close();
         }
     }
